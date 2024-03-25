@@ -107,3 +107,16 @@ html, body{
     font-size: 12px;
     margin: 0 5px;
 }
+.time
+{
+    font-size: 10px;
+    margin: 0 5px;
+}
+.sent .message
+{
+    background: #ffeb33;
+}
+.received  .message
+{
+    background: #fff;
+}
