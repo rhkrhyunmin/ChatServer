@@ -32,7 +32,7 @@ socket.on("chatting", (data)=> {
    const {name,msg,time} = data;
    const item = new Limodel(name, msg, time);
    item.makeLi(); 
-   disPlayContainer.scrollTop(0,disPlayContainer.scrollHeight)
+   disPlayContainer.scrollTop = 0;
 })
 
 function Limodel(name, msg, time)
