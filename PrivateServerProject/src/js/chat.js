@@ -12,6 +12,7 @@ chatinput.addEventListener("keypress", (event)=>
     if(event.keycode === 13)
     {
         send();
+        chatinput.value = "";
     }
 })
 
@@ -28,14 +29,11 @@ function send()
 sendButton.addEventListener("click",send)
 
 socket.on("chatting", (data)=> {
-    console.log(data);
    const {name,msg,time} = data;
    const item = new Limodel(name, msg, time);
    item.makeLi(); 
    disPlayContainer.scrollTop(0,disPlayContainer.scrollHeight)
 })
-
-console.log(socket);
 
 function Limodel(name, msg, time)
 {
