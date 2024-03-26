@@ -4,9 +4,18 @@ const socket = io();
 const nickname = document.querySelector("#nickname");
 const chatList = document.querySelector(".chatting-list");
 const chatinput = document.querySelector(".chatting-input");
-const sendButton = document.querySelector(".send-button")
+const sendButton = document.querySelector(".send-button");
+const disPlayContainer = document.querySelector(".display-container");
 
-sendButton.addEventListener("click",()=>
+chatinput.addEventListener("keypress", (event)=>
+{
+    if(event.keycode === 13)
+    {
+        send();
+    }
+})
+
+function send()
 {
     const param = {
         name: nickname.value,
@@ -14,13 +23,16 @@ sendButton.addEventListener("click",()=>
     }
 
     socket.emit("chatting",param)
-})
+}
+
+sendButton.addEventListener("click",send)
 
 socket.on("chatting", (data)=> {
+    console.log(data);
    const {name,msg,time} = data;
    const item = new Limodel(name, msg, time);
    item.makeLi(); 
-   
+   disPlayContainer.scrollTop(0,disPlayContainer.scrollHeight)
 })
 
 console.log(socket);
@@ -42,7 +54,7 @@ function Limodel(name, msg, time)
     <span class = "message">${this.msg}</span>
     <span class ="time">${this.time}</span>`;
     li.innerHTML = dom;
-    chatList(li);
+    chatList.appendChild(li);
     }
     
 }
