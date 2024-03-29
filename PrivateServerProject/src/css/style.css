@@ -121,8 +121,12 @@ html, body{
 .sent .message
 {
     background: #ffeb33;
+    max-width: 20ch;
+    white-space: normal;
 }
 .received .message
 {
     background: #fff;
+    max-width: 20ch;
+    white-space: normal;
 }

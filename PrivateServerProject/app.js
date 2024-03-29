@@ -9,11 +9,11 @@ const moment = require("moment");
 const io = socketIO(server);
 
 app.use(express.static(path.join(__dirname, "src")));
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 80;
 
 io.on("connection", (socket) => {
     socket.on("chatting", (data) => {
-        const {name,msg,time} = data;
+        const {name,msg} = data;
         io.emit("chatting",
         {
             name,
