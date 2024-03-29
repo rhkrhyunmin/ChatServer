@@ -13,12 +13,12 @@ const PORT = process.env.PORT || 5000;
 
 io.on("connection", (socket) => {
     socket.on("chatting", (data) => {
-        const {name,msg} = data;
+        const {name,msg,time} = data;
         io.emit("chatting",
         {
             name,
             msg,
-            time: moment(new Data()).format("h:ss A")
+            time: moment().format("h:mm A")
         });
     });
 });
