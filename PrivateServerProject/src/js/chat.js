@@ -45,9 +45,9 @@ function Limodel(name, msg, time)
     {
         const li = document.createElement("li");
         li.classList.add(nickname.value == this.name ? "sent" : "received")
-        const dom = `<span class="proflie">
+        const dom = `<span class="profile">
         <span class="user">${this.name}</span>
-        <img class="image" src="https://placeimg.com/200/50/any" alt="any">
+        <img class="image" src="https://source.unsplash.com/category/nature/150x50" alt="any">
     </span>
     <span class = "message">${this.msg}</span>
     <span class ="time">${this.time}</span>`;
