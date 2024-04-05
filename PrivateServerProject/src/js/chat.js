@@ -5,6 +5,7 @@ const nickname = document.querySelector("#nickname");
 const chatList = document.querySelector(".chatting-list");
 const chatinput = document.querySelector(".chatting-input");
 const sendButton = document.querySelector(".send-button");
+const sendfileButton = document.querySelector(".send-fileButton");
 const disPlayContainer = document.querySelector(".display-container");
 
 chatinput.addEventListener("keypress", (event)=>
@@ -24,6 +25,16 @@ function send()
     }
 
     socket.emit("chatting",param)
+}
+
+function sendFile()
+{
+    const param =
+    {
+        name: nickname.value,
+        msg: chatinput.value
+        
+    }
 }
 
 sendButton.addEventListener("click",send)
