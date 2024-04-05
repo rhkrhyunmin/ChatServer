@@ -43,7 +43,7 @@ html, body{
 }
 .input-container
 {
-    flex: 2;
+    flex: 2.2;
     display: flex;
     justify-content: stretch;
     align-items: stretch;
@@ -53,31 +53,32 @@ html, body{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0.3rem;
+    padding: 0.6rem;
 }
 .chatting-input
 {
     font-size: 12px;
     height: 100%;
     flex: 8;
-    border:  none;;
+    border:  none;
 }
 .send-button
 {
-    flex: 1;
+    flex: 3;
+    padding: 0.3rem;
     background: #ffeb33;
     border:none;
+    margin-right: 10px;
     height: 100%;
     border-radius: 3px;
 }
 
 .send-fileButton
 {
-    flex: 1;
+    flex: 7;
     background: #ffeb33;
     border: none;
     height: 100%;
-    width: 250%;
     border-radius: 3px;
 }
 
