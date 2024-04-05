@@ -1,4 +1,5 @@
 {
+  "homepage": "https://rhkrhyunmin.github.io/ChatServer.github.io/",
   "name": "privateserverproject",
   "version": "1.0.0",
   "description": "",
@@ -14,5 +15,8 @@
     "express": "^4.19.1",
     "moment": "^2.30.1",
     "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
