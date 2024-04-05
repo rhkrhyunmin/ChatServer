@@ -71,6 +71,15 @@ html, body{
     border-radius: 3px;
 }
 
+.send-fileButton
+{
+    flex: 1;
+    background: #fff;
+    border: none;
+    height: 100%;
+    border-radius: 4px;
+}
+
 .chatting-list li{
     width: 90%;
     padding: 0.3rem;
