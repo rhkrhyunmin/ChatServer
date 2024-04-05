@@ -74,10 +74,11 @@ html, body{
 .send-fileButton
 {
     flex: 1;
-    background: #fff;
+    background: #ffeb33;
     border: none;
     height: 100%;
-    border-radius: 4px;
+    width: 250%;
+    border-radius: 3px;
 }
 
 .chatting-list li{
